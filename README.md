@@ -1,4 +1,4 @@
-# react-dropdown-date
+# react-dropdown-date-accessible
 Highly customizable react based date picker. Select date from Day, Month and Year dropdown
 
 ## Credits
