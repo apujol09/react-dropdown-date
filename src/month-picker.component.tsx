@@ -16,6 +16,7 @@ interface IProps {
     name?: string;
     classes?: string;
     optionClasses?: string;
+    ariaLabel?: string;
 }
 
 interface IState {
@@ -76,7 +77,7 @@ export class MonthPicker extends React.Component<IProps, IState> {
     handleSelectionChange = (e: any) => this.props.onChange(e.target.value);
 
     render = () => {
-        const { id, name, classes, required, disabled, value } = this.props;
+        const { id, name, classes, required, disabled, value, ariaLabel } = this.props;
         return (
             <select
                 id={id}
@@ -86,6 +87,7 @@ export class MonthPicker extends React.Component<IProps, IState> {
                 disabled={disabled === true}
                 value={value}
                 onChange={this.handleSelectionChange}
+                aria-label={ariaLabel}
             >
                 {this.renderMonthOptions()}
             </select>

@@ -14,6 +14,7 @@ interface IProps {
     disabled?: boolean;
     classes?: string;
     optionClasses?: string;
+    ariaLabel?: string;
 }
 
 interface IState {
@@ -60,7 +61,7 @@ export class DayPicker extends React.Component<IProps, IState> {
     handleSelectionChange = (e: any) => this.props.onChange(e.target.value);
 
     render = () => {
-        const { id, name, classes, required, disabled, value } = this.props;
+        const { id, name, classes, required, disabled, value, ariaLabel } = this.props;
         return (
             <select
                 id={id}
@@ -70,6 +71,7 @@ export class DayPicker extends React.Component<IProps, IState> {
                 required={required === true}
                 disabled={disabled === true}
                 value={value}
+                aria-label={ariaLabel}
             >
                 {this.renderDayOptions()}
             </select>

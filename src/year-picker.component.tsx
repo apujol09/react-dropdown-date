@@ -13,6 +13,7 @@ interface IProps {
     disabled?: boolean;
     classes?: string;
     optionClasses?: string;
+    ariaLabel?: string;
 }
 
 interface IState {
@@ -66,7 +67,7 @@ export class YearPicker extends React.Component<IProps, IState> {
     handleSelectionChange = (e: any) => this.props.onChange(e.target.value);
 
     render = () => {
-        const { id, name, classes, required, disabled, value } = this.props;
+        const { id, name, classes, required, disabled, value, ariaLabel } = this.props;
         return (
             <select
                 id={id}
@@ -76,6 +77,7 @@ export class YearPicker extends React.Component<IProps, IState> {
                 disabled={disabled === true}
                 onChange={this.handleSelectionChange}
                 value={value}
+                aria-label={ariaLabel}
             >
                 {this.renderYearOptions()}
             </select>
