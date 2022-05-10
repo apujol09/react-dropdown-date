@@ -1,6 +1,6 @@
 {
     "name": "react-dropdown-date-accessible",
-    "version": "2.2.10",
+    "version": "2.2.11",
     "description": "Highly customizable and accessible react based date picker. Select date from Day, Month and Year dropdown",
     "license": "MIT",
     "keywords": [
